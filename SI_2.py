@@ -6,11 +6,12 @@ clock=pygame.time.Clock()
 
 screen = pygame.display.set_mode((400,600))
 
-#creating objects of game
 player=pygame.Rect(200,500,30,30)
 playerspeed=-4
 enemy=pygame.Rect(70,50,40,40)
 enemyspeed= -2;
+#Create a variable playerSpeed.
+
 
 while True:    
     screen.fill((0,0,0))
@@ -18,8 +19,10 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+        #Check if left arrow key is pressed
+            #move the player rectangle towards left
         
-         
+  
     enemy.x= enemy.x + enemyspeed
     
     if enemy.x == 0:
