@@ -11,14 +11,18 @@ playerspeed=-4
 enemy=pygame.Rect(70,50,40,40)
 enemyspeed= -2;
 #Create a variable playerSpeed.
-
-
+playerSpeed=20;
 while True:    
     screen.fill((0,0,0))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+          print(event)
+        if event.type ==pygame.KEYDOWN:
+            if event.key==pygame.K_LEFT:
+                player.x-=playerSpeed
+            
         #Check if left arrow key is pressed
             #move the player rectangle towards left
         
